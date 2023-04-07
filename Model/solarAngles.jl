@@ -2,13 +2,17 @@ function solarAngles(h,tzone,lat,long, track)
   #=============================================================================
    This function calculates the various solar angles and returns the incidence
    angle of direct rays on a horizontal surface (with single-axis tracking)
-   # Written by: M. D. Stuber, March 28, 2018, rev. May 15, 2019 (Julia 1.0)
-   # This code is used in the paper: Stuber (2018), DOI: 10.3390/pr6070076
+   # Written by: M. D. Stuber, March 28, 2018, rev. May 15, 2019 (Julia 1.0),
+   # rev. Jan 17, 2022 to include a fixed-angle collector that assumes that
+   # the tile angle is equal to the latitude
+   # Earlier version of this code is used in the paper: Stuber (2018), DOI: 10.3390/pr6070076
+   # This code is used in the paper: Rastinejad, Putnam, Stuber (2023)
    INPUT
     h: hour of year (1:8760)
     tzone: time-zone
     long: longitude
     lat: latitude
+    track: =1 for 1-axis tracking, =0 for fixed angle (no tracking)
    OUTPUT
     ia: solar incidence angle
   =============================================================================#

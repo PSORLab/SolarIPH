@@ -4,13 +4,19 @@ function lifecycleCost(Q, xL,xU,xts,xa,m, track, gen, stor, ngFT, qsys)
     # a solar hybridization strategy: fLCS = NG cost avoided - investment cost
     # Written by: M. D. Stuber, May 17, 2018, 
     # Modified by Justin Rastinejad July 2022,
-    # This code is used in the paper: Stuber (2018), DOI: 10.3390/pr6070076
+    # Earlier version of this code is used in the paper: Stuber (2018), DOI: 10.3390/pr6070076
+    # This code is used in the paper: Rastinejad, Putnam, Stuber (2023)
     # INPUTS
     #   Q: vector of heat outputs from solar array for each time point
     #   X: vector of optimization variable bounds
     #   xts: thermal storage decision variable (h)
     #   xa: aperture area decision variable (m2)
     #   m: capital model to use (=1 for convex, =2 for nonconvex)
+    #   track: tracking system =1 for 1-axis, =0 for fixed
+    #   gen: solar technology PV or PTC
+    #   stor: storage type EES or TES
+    #   ngFT: natural gas price in $/ft3
+    #   qsys: mean IPH system demand in MW
     # OUTPUTS
     #   flsc: total lifecycle savings if you implement solar
     ===========================================================================#

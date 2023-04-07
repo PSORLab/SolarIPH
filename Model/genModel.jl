@@ -1,8 +1,8 @@
 function genModel(DNI, DHI, Temp, tz, lat,long, track, gen)
 
-    #made by Justin Rastinejad 7/17/21
-    #based on https://www.scirp.org/journal/paperinformation.aspx?paperid=83262
-    #Modeling based on SunPower's E19-320 PV module
+    # Made by Justin Rastinejad 7/17/21
+    # PV model based on https://www.scirp.org/journal/paperinformation.aspx?paperid=83262
+    # PV modeling based on SunPower's E19-320 PV module
     
     #initializing vectors
     if  gen == "PV"

@@ -4,11 +4,14 @@ function iphProcessSmooth(Q,xts,xa, qsys,stor)
     # for use as a constraint in the optimization problem.  The solar fraction
     # calculation is identical to that in lifecycleCost.jl.
     # Written by: M. D. Stuber, Apr 14, 2018, rev. May 15, 2019
-    # This code is used in the paper: Stuber (2018), DOI: 10.3390/pr6070076
+    # Earlier version of this code is used in the paper: Stuber (2018), DOI: 10.3390/pr6070076
+    # This code is used in the paper: Rastinejad, Putnam, Stuber (2023)
     # INPUTS
     #   Q vector of heat outputs from solar array for each time point
     #   xts thermal storage decision variable (h)
     #   xa aperture area decision variable (m2)
+    #   stor: storage type EES or TES
+    #   qsys: mean IPH system demand in MW
     # OUTPUTS
     #   SF solar fraction
     ===========================================================================#
