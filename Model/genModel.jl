@@ -77,11 +77,10 @@ function genModel(DNI, DHI, Temp, tz, lat,long, track, gen)
         eS = 0.95 #soiling (sand/dirt getting on panels)
         eO = 0.97 #inverter 
         eW = 0.99 #Wiring
-        eH = 0.99 #electricity to resistive heating
         Boost = 1.0 #used for determining necessary increase in efficiency to be competitive with PTC =1 by default
 
         for i = 1:length(GHI)
-            Ps[i] = Ps[i] * eR * eS *eO * eW * eH * Boost
+            Ps[i] = Ps[i] * eR * eS *eO * eW  * Boost
         end
         display(mean(Ps))
         display(mean(GHI))
